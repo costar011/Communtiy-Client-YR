@@ -1,6 +1,6 @@
 import React from "react";
 import Reveal from "react-reveal/Reveal";
-import Fade from "react-reveal/Fade";
+import Flip from "react-reveal/Flip";
 import { Link } from "react-router-dom";
 
 const menus = [];
@@ -33,11 +33,11 @@ class MH0 extends React.Component {
         <div className="MH0__menuBox">
           {menus.map((menu, idx) => {
             return (
-              <Fade bottom delay={idx * 300} key={idx}>
+              <Flip bottom delay={idx * 300} key={idx}>
                 <Link to={menu.link}>
                   <div className="MH0__menuBox__list">{menu.menusList}</div>
                 </Link>
-              </Fade>
+              </Flip>
             );
           })}
         </div>
